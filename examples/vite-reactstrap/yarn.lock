@@ -1267,6 +1267,11 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
+nanoid@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-4.0.2.tgz#140b3c5003959adbebf521c170f282c5e7f9fb9e"
+  integrity sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==
+
 nanoid@^3.3.6:
   version "3.3.6"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
@@ -1395,8 +1400,12 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-"react-abstract-datatable@file:.yalc/react-abstract-datatable":
-  version "0.1.0"
+react-abstract-datatable@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-abstract-datatable/-/react-abstract-datatable-0.1.1.tgz#0a070bfa1eedb9d0b2f4f31047eaf634675ee679"
+  integrity sha512-99u3lX9impMceHUS+nhnGqljxQSeM9NDJ+cs44tpeOaG8oTHsjXSjLJtnS/qx809At38JSA6e2/SmfuiFHA9lQ==
+  dependencies:
+    nanoid "4.0.2"
 
 react-dom@^18.2.0:
   version "18.2.0"
