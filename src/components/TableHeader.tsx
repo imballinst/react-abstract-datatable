@@ -125,7 +125,7 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
       ),
       ...rest
     };
-    let sortIcon: 'sort' | 'sortUp' | 'sortDown' = 'sort';
+    let sortIcon: 'sort' | 'sort-up' | 'sort-down' = 'sort';
     let sortIconRender = null;
 
     if (isSortable && !checkbox) {
@@ -136,9 +136,9 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
         thProps['data-sort-order'] = sortState.order;
 
         if (sortState.order === 'asc') {
-          sortIcon = 'sortUp';
+          sortIcon = 'sort-up';
         } else {
-          sortIcon = 'sortDown';
+          sortIcon = 'sort-down';
         }
       }
 

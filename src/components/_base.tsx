@@ -1,65 +1,65 @@
 import React from 'react';
 
 // Tables.
-export const DefaultRow = (props: any) => {
+export const DefaultRow = (props: any): JSX.Element | null => {
   return <tr {...props} />;
 };
 
-export const DefaultCol = (props: any) => {
+export const DefaultCol = (props: any): JSX.Element | null => {
   return <td {...props} />;
 };
 
-export const DefaultTable = (props: any) => {
+export const DefaultTable = (props: any): JSX.Element | null => {
   return <table {...props} />;
 };
 
 // Forms.
-export const DefaultInputGroup = (props: any) => {
+export const DefaultInputGroup = (props: any): JSX.Element | null => {
   return <div {...props} />;
 };
 
-export const DefaultFormGroup = (props: any) => {
+export const DefaultFormGroup = (props: any): JSX.Element | null => {
   return <div {...props} />;
 };
 
-export const DefaultLabel = (props: any) => {
+export const DefaultLabel = (props: any): JSX.Element | null => {
   return <label {...props} />;
 };
 
 export const DefaultFormControl = React.forwardRef<HTMLInputElement, any>(
-  (props: any, ref) => {
+  (props: any, ref): JSX.Element | null => {
     return <input {...props} ref={ref} />;
   }
 );
 
 export const DefaultSelect = React.forwardRef<HTMLSelectElement, any>(
-  (props: any, ref) => {
+  (props: any, ref): JSX.Element | null => {
     return <select {...props} ref={ref} />;
   }
 );
 
-export const DefaultHelperText = (props: any) => {
+export const DefaultHelperText = (props: any): JSX.Element | null => {
   return <small {...props} />;
 };
 
 export const DefaultCheckbox = React.forwardRef<HTMLInputElement, any>(
-  (props: any, ref) => {
+  (props: any, ref): JSX.Element | null => {
     return <input {...props} ref={ref} />;
   }
 );
 
 // Buttons.
-export const DefaultButton = (props: any) => {
+export const DefaultButton = (props: any): JSX.Element | null => {
   return <button {...props} />;
 };
 
-export const DefaultButtonGroup = (props: any) => {
+export const DefaultButtonGroup = (props: any): JSX.Element | null => {
   return <div {...props} />;
 };
 
 // Icons.
 export const DefaultIcon = (props: {
-  icon: 'times' | 'sort' | 'sortUp' | 'sortDown';
-}) => {
+  icon: 'times' | 'sort' | 'sort-up' | 'sort-down';
+}): JSX.Element | null => {
   return <span>{props.icon}</span>;
 };

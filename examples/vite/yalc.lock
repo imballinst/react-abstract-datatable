@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "react-abstract-datatable": {
+      "signature": "4a2b3a0831bf9a3846d86476cc74573a",
+      "file": true
+    }
+  }
+}

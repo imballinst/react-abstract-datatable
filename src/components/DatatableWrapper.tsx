@@ -230,12 +230,18 @@ export interface DatatableWrapperProps<TTableRowType extends TableRowType> {
     Col?: typeof DefaultCol;
     Table?: typeof DefaultTable;
     InputGroup?: typeof DefaultInputGroup;
-    FormControl?: typeof DefaultFormControl;
+    FormControl?: (
+      props: React.ComponentProps<typeof DefaultFormControl>
+    ) => JSX.Element | null;
     FormGroup?: typeof DefaultFormGroup;
     Label?: typeof DefaultLabel;
-    Select?: typeof DefaultSelect;
+    Select?: (
+      props: React.ComponentProps<typeof DefaultSelect>
+    ) => JSX.Element | null;
     HelperText?: typeof DefaultHelperText;
-    Checkbox?: typeof DefaultCheckbox;
+    Checkbox?: (
+      props: React.ComponentProps<typeof DefaultCheckbox>
+    ) => JSX.Element | null;
     Button?: typeof DefaultButton;
     ButtonGroup?: typeof DefaultButtonGroup;
     Icon?: typeof DefaultIcon;

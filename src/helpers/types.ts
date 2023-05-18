@@ -1,9 +1,4 @@
-import React, {
-  CSSProperties,
-  MutableRefObject,
-  ReactNode,
-  ThHTMLAttributes
-} from 'react';
+import React, { CSSProperties, ReactNode, ThHTMLAttributes } from 'react';
 
 /**
  * The sort type used in the states.
