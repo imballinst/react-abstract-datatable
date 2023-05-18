@@ -8,7 +8,8 @@ import {
   FormGroup,
   InputGroup,
   Row,
-  Table
+  Table,
+  FormText
 } from 'reactstrap';
 import {
   DatatableWrapper,
@@ -62,7 +63,7 @@ const STORY_HEADERS: TableColumnType<ArrayElementType>[] = [
     prop: 'button',
     cell: (row) => (
       <Button
-        variant="outline-primary"
+        color="outline-primary"
         size="sm"
         onClick={() => {
           alert(`${row.username}'s score is ${row.score}`);
@@ -87,7 +88,7 @@ function Icon(props: { icon: 'times' | 'sort' | 'sort-up' | 'sort-down' }) {
 }
 
 function Checkbox(props: any) {
-  return <Input {...props} type="chekcbox" />;
+  return <Input {...props} type="checkbox" />;
 }
 
 // Then, use it in a component.
@@ -103,19 +104,19 @@ export default function App() {
         }
       }}
       tableComponents={{
-        // Button,
+        Button: (props) => <Button {...props} color="primary" />,
         ButtonGroup,
         Checkbox,
-        // Col,
-        // FormControl: Control,
-        // FormGroup,
-        // HelperText: Text,
-        Icon
-        // InputGroup,
-        // Label,
-        // Row,
-        // Select: Select
-        // Table
+        Col,
+        FormControl: Input,
+        FormGroup,
+        HelperText: FormText,
+        Icon,
+        InputGroup,
+        Label,
+        Row,
+        Select: (props) => <Input {...props} type="select" />,
+        Table
       }}
     >
       <Row className="mb-4 p-2">

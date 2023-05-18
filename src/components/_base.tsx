@@ -32,7 +32,7 @@ export const DefaultFormControl = React.forwardRef<HTMLInputElement, any>(
   }
 );
 
-export const DefaultSelect = React.forwardRef<HTMLSelectElement, any>(
+export const DefaultSelect = React.forwardRef<any, any>(
   (props: any, ref): JSX.Element | null => {
     return <select {...props} ref={ref} />;
   }
@@ -49,7 +49,18 @@ export const DefaultCheckbox = React.forwardRef<HTMLInputElement, any>(
 );
 
 // Buttons.
-export const DefaultButton = (props: any): JSX.Element | null => {
+interface DefaultButtonProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    any
+  > {
+  [k: string]: any;
+  variant?: string;
+}
+
+export const DefaultButton = (
+  props: DefaultButtonProps
+): JSX.Element | null => {
   return <button {...props} />;
 };
 

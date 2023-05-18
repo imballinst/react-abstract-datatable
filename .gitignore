@@ -4,3 +4,4 @@ lib/
 
 *.log
 .yalc
+.yalc.lock

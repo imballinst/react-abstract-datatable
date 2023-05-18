@@ -195,10 +195,6 @@ const [useCtx, Provider] = createCtx<DatatableWrapperContextType<any>>();
  */
 export const useDatatableWrapper = useCtx;
 
-type ExtractComponentType<
-  T extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>
-> = (props: React.ComponentProps<T>) => JSX.Element | null;
-
 /**
  * The props that can be passed to the `DatatableWrapper` component.
  */
@@ -230,19 +226,31 @@ export interface DatatableWrapperProps<TTableRowType extends TableRowType> {
    * Table components.
    */
   tableComponents?: {
-    Row?: ExtractComponentType<typeof DefaultRow>;
-    Col?: ExtractComponentType<typeof DefaultCol>;
-    Table?: ExtractComponentType<typeof DefaultTable>;
-    InputGroup?: ExtractComponentType<typeof DefaultInputGroup>;
-    FormControl?: ExtractComponentType<typeof DefaultFormControl>;
-    FormGroup?: ExtractComponentType<typeof DefaultFormGroup>;
-    Label?: ExtractComponentType<typeof DefaultLabel>;
-    Select?: ExtractComponentType<typeof DefaultSelect>;
-    HelperText?: ExtractComponentType<typeof DefaultHelperText>;
-    Checkbox?: ExtractComponentType<typeof DefaultCheckbox>;
-    Button?: ExtractComponentType<typeof DefaultButton>;
-    ButtonGroup?: ExtractComponentType<typeof DefaultButtonGroup>;
-    Icon?: ExtractComponentType<typeof DefaultIcon>;
+    Row?: React.ComponentType<React.ComponentProps<typeof DefaultRow>>;
+    Col?: React.ComponentType<React.ComponentProps<typeof DefaultCol>>;
+    Table?: React.ComponentType<React.ComponentProps<typeof DefaultTable>>;
+    InputGroup?: React.ComponentType<
+      React.ComponentProps<typeof DefaultInputGroup>
+    >;
+    FormControl?: React.ComponentType<
+      React.ComponentProps<typeof DefaultFormControl>
+    >;
+    FormGroup?: React.ComponentType<
+      React.ComponentProps<typeof DefaultFormGroup>
+    >;
+    Label?: React.ComponentType<React.ComponentProps<typeof DefaultLabel>>;
+    Select?: React.ComponentType<React.ComponentProps<typeof DefaultSelect>>;
+    HelperText?: React.ComponentType<
+      React.ComponentProps<typeof DefaultHelperText>
+    >;
+    Checkbox?: React.ComponentType<
+      React.ComponentProps<typeof DefaultCheckbox>
+    >;
+    Button?: React.ComponentType<React.ComponentProps<typeof DefaultButton>>;
+    ButtonGroup?: React.ComponentType<
+      React.ComponentProps<typeof DefaultButtonGroup>
+    >;
+    Icon?: React.ComponentType<React.ComponentProps<typeof DefaultIcon>>;
   };
 }
 
