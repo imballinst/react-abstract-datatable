@@ -1,0 +1,23 @@
+.devcontainer/
+examples/
+src/
+scripts/
+.github/
+api/
+# This is the "dumping" space for all kinds of generator.
+out/
+storybook-static/
+
+*.log
+.travis.yml
+.babelrc
+Makefile
+tsconfig*
+.storybook
+.prettierrc.json
+setupTests.ts
+jest.config.*
+typedoc.json
+
+# Markdowns.
+MIGRATION_GUIDE.md

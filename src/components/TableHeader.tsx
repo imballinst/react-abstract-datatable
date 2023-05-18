@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Form } from 'react-bootstrap';
 
 import { useDatatableWrapper } from './DatatableWrapper';
 import FontAwesome from './FontAwesome';
@@ -72,7 +71,8 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
     onCheckboxChange: onCheckboxChangeContext,
     checkboxState: checkboxStateContext,
     filteredDataLength: filteredDataLengthContext,
-    data
+    data,
+    tableComponents
   } = useDatatableWrapper();
   useControlledStateSetter(controlledProps);
 
@@ -83,6 +83,8 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
   const checkboxState = controlledProps?.checkboxState || checkboxStateContext;
   const filteredDataLength =
     controlledProps?.filteredDataLength || filteredDataLengthContext;
+
+  const { FormGroup, Label, Checkbox } = tableComponents;
 
   const { createHeaderCheckboxClickHandler } = useCreateCheckboxHandlers({
     checkboxState,
@@ -167,15 +169,15 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
 
       // Source for using visually hidden: https://www.w3.org/WAI/tutorials/forms/labels/#hiding-the-label-element.
       rendered = (
-        <Form.Group controlId={`table-selection-all`}>
-          <Form.Label className="visually-hidden">
+        <FormGroup controlId={`table-selection-all`}>
+          <Label className="visually-hidden">
             {nextCheckboxType === 'add'
               ? `Add ${
                   data.length - numberOfSelectedRowsInCurrentPage
                 } rows to selection`
               : `Remove ${numberOfSelectedRowsInCurrentPage} rows from selection`}
-          </Form.Label>
-          <Form.Check
+          </Label>
+          <Checkbox
             type="checkbox"
             name="table-selection"
             value="all"
@@ -192,7 +194,7 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
               idProp: checkbox.idProp
             })}
           />
-        </Form.Group>
+        </FormGroup>
       );
     } else if (headerCell) {
       rendered = headerCell(sortIconRender, sortState);

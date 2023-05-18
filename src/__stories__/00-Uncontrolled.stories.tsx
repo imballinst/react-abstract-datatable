@@ -1,7 +1,12 @@
 import React, { MutableRefObject, ReactNode, useRef } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Col, Row, Table } from 'react-bootstrap';
 import { parse } from 'date-fns';
+
+import {
+  DefaultCol as Col,
+  DefaultRow as Row,
+  DefaultTable as Table
+} from '../components/_base';
 
 import json from './resources/story-data.json';
 import { StoryColumnType } from './resources/types';
@@ -336,33 +341,17 @@ const ComposedTableRowTemplate: ComponentStory<typeof StoryTable> = ({
         onCheckboxChange
       }}
     >
-      <Row className="mb-4">
-        <Col
-          xs={12}
-          lg={4}
-          className="d-flex flex-col justify-content-end align-items-end"
-        >
+      <Row>
+        <Col>
           <Filter />
         </Col>
-        <Col
-          xs={12}
-          sm={6}
-          lg={4}
-          className="d-flex flex-col justify-content-lg-center align-items-center justify-content-sm-start mb-2 mb-sm-0"
-        >
+        <Col>
           <PaginationOptions alwaysShowPagination={alwaysShowPagination} />
         </Col>
-        <Col
-          xs={12}
-          sm={6}
-          lg={4}
-          className="d-flex flex-col justify-content-end align-items-end"
-        >
+        <Col>
           <Pagination alwaysShowPagination={alwaysShowPagination} />
         </Col>
-        <Col xs={12} className="mt-2">
-          {checkboxControl}
-        </Col>
+        <Col>{checkboxControl}</Col>
       </Row>
       <Table>
         <TableHeader />
@@ -391,7 +380,7 @@ const ComposedTableRowTemplate: ComponentStory<typeof StoryTable> = ({
       </Table>
 
       <Row>
-        <Col xs={12}>
+        <Col>
           <StrayResetSelectionButton />
         </Col>
       </Row>

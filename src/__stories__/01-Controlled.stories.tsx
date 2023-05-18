@@ -1,6 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Col, Row, Table } from 'react-bootstrap';
+
+import {
+  DefaultCol as Col,
+  DefaultRow as Row,
+  DefaultTable as Table
+} from '../components/_base';
 
 import { FetchParams, FetchResponse, StoryColumnType } from './resources/types';
 import {

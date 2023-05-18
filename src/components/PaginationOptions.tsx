@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
 import { useControlledStateSetter } from '../helpers/hooks';
 
 import { makeClasses } from '../helpers/object';
@@ -89,7 +88,8 @@ export function PaginationOptions({
     onRowsPerPageChange: onRowsPerPageChangeContext,
     rowsPerPageOptions: rowsPerPageOptionsContext,
     rowsPerPageState: rowsPerPageStateContext,
-    filteredDataLength: filteredDataLengthContext
+    filteredDataLength: filteredDataLengthContext,
+    tableComponents
   } = useDatatableWrapper();
   useControlledStateSetter(controlledProps);
 
@@ -109,22 +109,26 @@ export function PaginationOptions({
     !alwaysShowPagination &&
     filteredDataLength <= Math.min(...rowsPerPageOptions);
 
+  const { FormGroup, Label, Select, HelperText } = tableComponents;
+
   return (
-    <Form.Group
+    <FormGroup
       controlId="formGroupPagination"
       className={makeClasses('paginationOpts__root', classes?.formGroup, {
         invisible: hidePaginationOptions
       })}
     >
-      <Form.Label className={classes?.formText}>
+      <Label className={classes?.formText}>
         {labels?.beforeSelect || 'Rows per page'}
-      </Form.Label>
-      <Form.Select
+      </Label>
+      <Select
         name="table-pagination-options"
         value={rowsPerPageState}
         as="select"
         placeholder="select"
-        onChange={(e) => onRowsPerPageChange(Number(e.target.value))}
+        onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+          onRowsPerPageChange(Number(e.target.value))
+        }
         className={classes?.formControl}
       >
         {rowsPerPageOptions.map((option: number) => {
@@ -135,12 +139,12 @@ export function PaginationOptions({
 
           return <option {...optionProps}>{option}</option>;
         })}
-      </Form.Select>
+      </Select>
       {labels?.afterSelect && (
-        <Form.Text className={classes?.formText}>
+        <HelperText className={classes?.formText}>
           {labels?.afterSelect}
-        </Form.Text>
+        </HelperText>
       )}
-    </Form.Group>
+    </FormGroup>
   );
 }

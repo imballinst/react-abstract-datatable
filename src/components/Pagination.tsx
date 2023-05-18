@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef } from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
 import { useControlledStateSetter } from '../helpers/hooks';
 
 import { makeClasses } from '../helpers/object';
@@ -88,7 +87,8 @@ export function Pagination({
   const {
     currentPageState: currentPageStateContext,
     maxPage: maxPageContext,
-    onPaginationChange: onPaginationChangeContext
+    onPaginationChange: onPaginationChangeContext,
+    tableComponents
   } = useDatatableWrapper();
   useControlledStateSetter(controlledProps);
 
@@ -118,6 +118,8 @@ export function Pagination({
       prevPageNumbers: prevPageNumbers.current
     });
   }, [currentPageState, maxPage, paginationRange]);
+
+  const { Button, ButtonGroup } = tableComponents;
 
   useEffect(() => {
     prevPageNumbers.current = pageNumbers;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
 
 import {
   CheckboxOnChange,
@@ -195,7 +194,8 @@ export function TableRow<TTableRowType extends TableRowType>({
     onCheckboxChange: onCheckboxChangeContext,
     checkboxState: checkboxStateContext,
     filteredDataLength: filteredDataLengthContext,
-    data
+    data,
+    tableComponents
   } = useDatatableWrapper();
   const headersLength = headers.length;
 
@@ -217,6 +217,8 @@ export function TableRow<TTableRowType extends TableRowType>({
   const checkboxState = controlledProps?.checkboxState || checkboxStateContext;
   const filteredDataLength =
     controlledProps?.filteredDataLength || filteredDataLengthContext;
+
+  const { FormGroup, Label, Checkbox } = tableComponents;
 
   const { createColumnCheckboxClickHandler } = useCreateCheckboxHandlers({
     checkboxState,
@@ -244,13 +246,13 @@ export function TableRow<TTableRowType extends TableRowType>({
 
       // Source for using visually hidden: https://www.w3.org/WAI/tutorials/forms/labels/#hiding-the-label-element.
       value = (
-        <Form.Group controlId={`table-selection-${rowData[checkbox.idProp]}`}>
-          <Form.Label className="visually-hidden">
+        <FormGroup controlId={`table-selection-${rowData[checkbox.idProp]}`}>
+          <Label className="visually-hidden">
             {isSelected
               ? `Remove ${idValue} from selection`
               : `Add ${idValue} to selection`}
-          </Form.Label>
-          <Form.Check
+          </Label>
+          <Checkbox
             type="checkbox"
             name="table-selection"
             value={rowData[checkbox.idProp]}
@@ -262,7 +264,7 @@ export function TableRow<TTableRowType extends TableRowType>({
               rowIdx
             })}
           />
-        </Form.Group>
+        </FormGroup>
       );
     } else {
       // Render normally.

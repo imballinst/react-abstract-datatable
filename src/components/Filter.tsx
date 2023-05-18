@@ -1,5 +1,4 @@
 import React from 'react';
-import { InputGroup, Form, Button } from 'react-bootstrap';
 import { useControlledStateSetter } from '../helpers/hooks';
 import { FilterOnChange } from '../helpers/types';
 import { useDatatableWrapper } from './DatatableWrapper';
@@ -60,7 +59,8 @@ export function Filter({
   const {
     filterState: filterStateContext,
     onFilterChange: onFilterChangeContext,
-    isFilterable
+    isFilterable,
+    tableComponents
   } = useDatatableWrapper();
   useControlledStateSetter(controlledProps);
 
@@ -78,14 +78,18 @@ export function Filter({
     onFilterChangeContext;
   const filterState = controlledProps?.filter || filterStateContext;
 
+  const { InputGroup, FormControl, Button } = tableComponents;
+
   return (
     <InputGroup className={classes?.inputGroup}>
-      <Form.Control
+      <FormControl
         type="text"
         name="table-filter"
         value={filterState}
         placeholder={placeholder}
-        onChange={(e) => onFilterChange(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          onFilterChange(e.target.value)
+        }
         className={classes?.input}
       />
       <Button

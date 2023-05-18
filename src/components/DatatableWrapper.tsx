@@ -28,6 +28,20 @@ import {
   TableRowType
 } from '../helpers/types';
 import { TableColumnType } from '../helpers/types';
+import {
+  DefaultRow,
+  DefaultCol,
+  DefaultTable,
+  DefaultInputGroup,
+  DefaultFormControl,
+  DefaultFormGroup,
+  DefaultLabel,
+  DefaultSelect,
+  DefaultHelperText,
+  DefaultCheckbox,
+  DefaultButton,
+  DefaultButtonGroup
+} from './_base';
 
 /**
  * This is the additional parameters for the filter function.
@@ -165,6 +179,10 @@ interface DatatableWrapperContextType<TTableRowType> {
   filteredDataLength: number;
   data: TTableRowType[];
   body: TTableRowType[];
+  // Table components.
+  tableComponents: Required<
+    NonNullable<DatatableWrapperProps<any>['tableComponents']>
+  >;
 }
 
 const [useCtx, Provider] = createCtx<DatatableWrapperContextType<any>>();
@@ -203,6 +221,23 @@ export interface DatatableWrapperProps<TTableRowType extends TableRowType> {
    * and raising the `DatatableWrapper` a bit higher in the structure instead.
    */
   tableEventsRef?: MutableRefObject<UncontrolledTableEvents | undefined>;
+  /**
+   * Table components.
+   */
+  tableComponents?: {
+    Row?: typeof DefaultRow;
+    Col?: typeof DefaultCol;
+    Table?: typeof DefaultTable;
+    InputGroup?: typeof DefaultInputGroup;
+    FormControl?: typeof DefaultFormControl;
+    FormGroup?: typeof DefaultFormGroup;
+    Label?: typeof DefaultLabel;
+    Select?: typeof DefaultSelect;
+    HelperText?: typeof DefaultHelperText;
+    Checkbox?: typeof DefaultCheckbox;
+    Button?: typeof DefaultButton;
+    ButtonGroup?: typeof DefaultButtonGroup;
+  };
 }
 
 /**
@@ -250,6 +285,7 @@ export function DatatableWrapper<TTableRowType extends TableRowType>({
   paginationOptionsProps,
   checkboxProps,
   tableEventsRef,
+  tableComponents,
   children
 }: DatatableWrapperProps<TTableRowType>) {
   const [state, setState] = useState<DatatableState>(
@@ -432,6 +468,36 @@ export function DatatableWrapper<TTableRowType extends TableRowType>({
     };
   }, [isControlled, body, filter, sort, pagination, isFilterable]);
 
+  const tableComponentsWithDefaults = useMemo(() => {
+    return {
+      Row: tableComponents?.Row || DefaultRow,
+      Col: tableComponents?.Col || DefaultCol,
+      Table: tableComponents?.Table || DefaultTable,
+      InputGroup: tableComponents?.InputGroup || DefaultInputGroup,
+      FormControl: tableComponents?.FormControl || DefaultFormControl,
+      FormGroup: tableComponents?.FormGroup || DefaultFormGroup,
+      Label: tableComponents?.Label || DefaultLabel,
+      Select: tableComponents?.Select || DefaultSelect,
+      HelperText: tableComponents?.HelperText || DefaultHelperText,
+      Checkbox: tableComponents?.Checkbox || DefaultCheckbox,
+      Button: tableComponents?.Button || DefaultButton,
+      ButtonGroup: tableComponents?.ButtonGroup || DefaultButtonGroup
+    };
+  }, [
+    tableComponents?.Row,
+    tableComponents?.Col,
+    tableComponents?.Table,
+    tableComponents?.InputGroup,
+    tableComponents?.FormControl,
+    tableComponents?.FormGroup,
+    tableComponents?.Label,
+    tableComponents?.Select,
+    tableComponents?.HelperText,
+    tableComponents?.Checkbox,
+    tableComponents?.Button,
+    tableComponents?.ButtonGroup
+  ]);
+
   return (
     <Provider
       value={{
@@ -461,7 +527,9 @@ export function DatatableWrapper<TTableRowType extends TableRowType>({
         maxPage,
         filteredDataLength,
         data,
-        body
+        body,
+        // Table components.
+        tableComponents: tableComponentsWithDefaults
       }}
     >
       {children}
