@@ -195,6 +195,10 @@ const [useCtx, Provider] = createCtx<DatatableWrapperContextType<any>>();
  */
 export const useDatatableWrapper = useCtx;
 
+type ExtractComponentType<
+  T extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>
+> = (props: React.ComponentProps<T>) => JSX.Element | null;
+
 /**
  * The props that can be passed to the `DatatableWrapper` component.
  */
@@ -226,25 +230,19 @@ export interface DatatableWrapperProps<TTableRowType extends TableRowType> {
    * Table components.
    */
   tableComponents?: {
-    Row?: typeof DefaultRow;
-    Col?: typeof DefaultCol;
-    Table?: typeof DefaultTable;
-    InputGroup?: typeof DefaultInputGroup;
-    FormControl?: (
-      props: React.ComponentProps<typeof DefaultFormControl>
-    ) => JSX.Element | null;
-    FormGroup?: typeof DefaultFormGroup;
-    Label?: typeof DefaultLabel;
-    Select?: (
-      props: React.ComponentProps<typeof DefaultSelect>
-    ) => JSX.Element | null;
-    HelperText?: typeof DefaultHelperText;
-    Checkbox?: (
-      props: React.ComponentProps<typeof DefaultCheckbox>
-    ) => JSX.Element | null;
-    Button?: typeof DefaultButton;
-    ButtonGroup?: typeof DefaultButtonGroup;
-    Icon?: typeof DefaultIcon;
+    Row?: ExtractComponentType<typeof DefaultRow>;
+    Col?: ExtractComponentType<typeof DefaultCol>;
+    Table?: ExtractComponentType<typeof DefaultTable>;
+    InputGroup?: ExtractComponentType<typeof DefaultInputGroup>;
+    FormControl?: ExtractComponentType<typeof DefaultFormControl>;
+    FormGroup?: ExtractComponentType<typeof DefaultFormGroup>;
+    Label?: ExtractComponentType<typeof DefaultLabel>;
+    Select?: ExtractComponentType<typeof DefaultSelect>;
+    HelperText?: ExtractComponentType<typeof DefaultHelperText>;
+    Checkbox?: ExtractComponentType<typeof DefaultCheckbox>;
+    Button?: ExtractComponentType<typeof DefaultButton>;
+    ButtonGroup?: ExtractComponentType<typeof DefaultButtonGroup>;
+    Icon?: ExtractComponentType<typeof DefaultIcon>;
   };
 }
 
