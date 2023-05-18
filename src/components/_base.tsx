@@ -56,3 +56,10 @@ export const DefaultButton = (props: any) => {
 export const DefaultButtonGroup = (props: any) => {
   return <div {...props} />;
 };
+
+// Icons.
+export const DefaultIcon = (props: {
+  icon: 'times' | 'sort' | 'sortUp' | 'sortDown';
+}) => {
+  return <span>{props.icon}</span>;
+};

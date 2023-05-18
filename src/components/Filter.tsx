@@ -2,7 +2,6 @@ import React from 'react';
 import { useControlledStateSetter } from '../helpers/hooks';
 import { FilterOnChange } from '../helpers/types';
 import { useDatatableWrapper } from './DatatableWrapper';
-import FontAwesome from './FontAwesome';
 
 /**
  * This is an interface for customizing the classes for
@@ -78,7 +77,7 @@ export function Filter({
     onFilterChangeContext;
   const filterState = controlledProps?.filter || filterStateContext;
 
-  const { InputGroup, FormControl, Button } = tableComponents;
+  const { InputGroup, FormControl, Button, Icon } = tableComponents;
 
   return (
     <InputGroup className={classes?.inputGroup}>
@@ -97,7 +96,7 @@ export function Filter({
         className={classes?.clearButton}
         aria-label="Clear filter"
       >
-        <FontAwesome icon="times" className="fa-fw" />
+        <Icon icon="times" />
       </Button>
     </InputGroup>
   );

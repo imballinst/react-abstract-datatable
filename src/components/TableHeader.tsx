@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 
 import { useDatatableWrapper } from './DatatableWrapper';
-import FontAwesome from './FontAwesome';
 import { makeClasses } from '../helpers/object';
 import {
   SortType,
@@ -84,7 +83,7 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
   const filteredDataLength =
     controlledProps?.filteredDataLength || filteredDataLengthContext;
 
-  const { FormGroup, Label, Checkbox } = tableComponents;
+  const { FormGroup, Label, Checkbox, Icon } = tableComponents;
 
   const { createHeaderCheckboxClickHandler } = useCreateCheckboxHandlers({
     checkboxState,
@@ -146,7 +145,7 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
       thProps.onClick = () => onSortChange(getNextSortState(sortState, prop));
       thProps.role = 'button';
 
-      sortIconRender = <FontAwesome icon={sortIcon} className="fa-fw" />;
+      sortIconRender = <Icon icon={sortIcon} />;
     }
 
     let rendered;

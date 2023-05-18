@@ -40,7 +40,8 @@ import {
   DefaultHelperText,
   DefaultCheckbox,
   DefaultButton,
-  DefaultButtonGroup
+  DefaultButtonGroup,
+  DefaultIcon
 } from './_base';
 
 /**
@@ -237,6 +238,7 @@ export interface DatatableWrapperProps<TTableRowType extends TableRowType> {
     Checkbox?: typeof DefaultCheckbox;
     Button?: typeof DefaultButton;
     ButtonGroup?: typeof DefaultButtonGroup;
+    Icon?: typeof DefaultIcon;
   };
 }
 
@@ -481,7 +483,8 @@ export function DatatableWrapper<TTableRowType extends TableRowType>({
       HelperText: tableComponents?.HelperText || DefaultHelperText,
       Checkbox: tableComponents?.Checkbox || DefaultCheckbox,
       Button: tableComponents?.Button || DefaultButton,
-      ButtonGroup: tableComponents?.ButtonGroup || DefaultButtonGroup
+      ButtonGroup: tableComponents?.ButtonGroup || DefaultButtonGroup,
+      Icon: tableComponents?.Icon || DefaultIcon
     };
   }, [
     tableComponents?.Row,
@@ -495,7 +498,8 @@ export function DatatableWrapper<TTableRowType extends TableRowType>({
     tableComponents?.HelperText,
     tableComponents?.Checkbox,
     tableComponents?.Button,
-    tableComponents?.ButtonGroup
+    tableComponents?.ButtonGroup,
+    tableComponents?.Icon
   ]);
 
   return (
