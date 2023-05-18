@@ -23,7 +23,8 @@
     "v:betapatch": "npm version prepatch --preid beta",
     "v:prebump": "npm version prerelease",
     "generate-story-data": "ts-node --esm scripts/generate-story-data.ts",
-    "check-latest-docs": "yarn build:docs && ts-node --esm scripts/check-latest-docs.ts"
+    "check-latest-docs": "yarn build:docs && ts-node --esm scripts/check-latest-docs.ts",
+    "yalc:publish": "yalc publish"
   },
   "repository": "git@github.com:imballinst/react-bs-datatable.git",
   "author": "Try Ajitiono",
@@ -59,7 +60,8 @@
     "ts-node": "10.7.0",
     "typedoc": "0.22.11",
     "typedoc-plugin-markdown": "3.11.13",
-    "typescript": "4.5.5"
+    "typescript": "4.5.5",
+    "yalc": "1.0.0-pre.53"
   },
   "peerDependencies": {
     "react": ">=16.8"
