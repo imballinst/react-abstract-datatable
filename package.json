@@ -1,6 +1,6 @@
 {
   "name": "react-abstract-datatable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Datatable with agnostic interface that you can use on various CSS component libraries",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
