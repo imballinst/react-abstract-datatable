@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / components/TableHeader
+[react-abstract-datatable](../README.md) / components/TableHeader
 
 # Module: components/TableHeader
 
@@ -33,4 +33,4 @@ Renders a list of table headers.
 
 #### Defined in
 
-[components/TableHeader.tsx:66](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableHeader.tsx#L66)
+[components/TableHeader.tsx:64](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableHeader.tsx#L64)

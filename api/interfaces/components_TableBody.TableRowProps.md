@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / TableRowProps
+[react-abstract-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / TableRowProps
 
 # Interface: TableRowProps<TTableRowType\>
 
@@ -36,7 +36,7 @@ Classes for the rows and columns.
 
 #### Defined in
 
-[components/TableBody.tsx:158](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L158)
+[components/TableBody.tsx:157](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L157)
 
 ___
 
@@ -48,7 +48,7 @@ Props to make the component controlled.
 
 #### Defined in
 
-[components/TableBody.tsx:160](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L160)
+[components/TableBody.tsx:159](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L159)
 
 ___
 
@@ -60,7 +60,7 @@ The row data.
 
 #### Defined in
 
-[components/TableBody.tsx:149](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L149)
+[components/TableBody.tsx:148](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L148)
 
 ___
 
@@ -72,7 +72,7 @@ The row index.
 
 #### Defined in
 
-[components/TableBody.tsx:151](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L151)
+[components/TableBody.tsx:150](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L150)
 
 ___
 
@@ -84,7 +84,7 @@ Props to the `tr` element.
 
 #### Defined in
 
-[components/TableBody.tsx:162](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L162)
+[components/TableBody.tsx:161](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L161)
 
 ## Methods
 
@@ -107,4 +107,4 @@ Optional row on click event.
 
 #### Defined in
 
-[components/TableBody.tsx:153](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L153)
+[components/TableBody.tsx:152](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L152)

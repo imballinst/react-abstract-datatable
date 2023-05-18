@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [helpers/hooks](../modules/helpers_hooks.md) / useCreateCheckboxHandlersParameter
+[react-abstract-datatable](../README.md) / [helpers/hooks](../modules/helpers_hooks.md) / useCreateCheckboxHandlersParameter
 
 # Interface: useCreateCheckboxHandlersParameter
 
@@ -24,7 +24,7 @@ Pass the object if you are using controlled table.
 
 #### Defined in
 
-[helpers/hooks.ts:24](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/hooks.ts#L24)
+[helpers/hooks.ts:24](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/hooks.ts#L24)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[helpers/hooks.ts:27](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/hooks.ts#L27)
+[helpers/hooks.ts:27](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/hooks.ts#L27)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[helpers/hooks.ts:26](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/hooks.ts#L26)
+[helpers/hooks.ts:26](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/hooks.ts#L26)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[helpers/hooks.ts:25](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/hooks.ts#L25)
+[helpers/hooks.ts:25](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/hooks.ts#L25)

@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / components/PaginationOptions
+[react-abstract-datatable](../README.md) / components/PaginationOptions
 
 # Module: components/PaginationOptions
 
@@ -42,4 +42,4 @@ When `alwaysShowPagination` is set to `false`, then this component will be visua
 
 #### Defined in
 
-[components/PaginationOptions.tsx:82](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/PaginationOptions.tsx#L82)
+[components/PaginationOptions.tsx:81](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/PaginationOptions.tsx#L81)

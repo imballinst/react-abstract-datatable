@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/DatatableWrapper](../modules/components_DatatableWrapper.md) / TablePaginationParameters
+[react-abstract-datatable](../README.md) / [components/DatatableWrapper](../modules/components_DatatableWrapper.md) / TablePaginationParameters
 
 # Interface: TablePaginationParameters
 
@@ -30,4 +30,4 @@ The initial states for the table.
 
 #### Defined in
 
-[components/DatatableWrapper.tsx:83](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/DatatableWrapper.tsx#L83)
+[components/DatatableWrapper.tsx:98](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/DatatableWrapper.tsx#L98)

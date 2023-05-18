@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/DatatableWrapper](../modules/components_DatatableWrapper.md) / TableFilterParameters
+[react-abstract-datatable](../README.md) / [components/DatatableWrapper](../modules/components_DatatableWrapper.md) / TableFilterParameters
 
 # Interface: TableFilterParameters
 
@@ -29,4 +29,4 @@ The initial states for the table.
 
 #### Defined in
 
-[components/DatatableWrapper.tsx:38](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/DatatableWrapper.tsx#L38)
+[components/DatatableWrapper.tsx:53](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/DatatableWrapper.tsx#L53)

@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / components/BulkCheckboxControl
+[react-abstract-datatable](../README.md) / components/BulkCheckboxControl
 
 # Module: components/BulkCheckboxControl
 
@@ -40,4 +40,4 @@ This is only fit for an uncontrolled table.
 
 #### Defined in
 
-[components/BulkCheckboxControl.tsx:40](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/BulkCheckboxControl.tsx#L40)
+[components/BulkCheckboxControl.tsx:40](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/BulkCheckboxControl.tsx#L40)

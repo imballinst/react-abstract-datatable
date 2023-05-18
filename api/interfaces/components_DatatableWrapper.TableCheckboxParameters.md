@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/DatatableWrapper](../modules/components_DatatableWrapper.md) / TableCheckboxParameters
+[react-abstract-datatable](../README.md) / [components/DatatableWrapper](../modules/components_DatatableWrapper.md) / TableCheckboxParameters
 
 # Interface: TableCheckboxParameters
 
@@ -24,7 +24,7 @@ The initial states for the table.
 
 #### Defined in
 
-[components/DatatableWrapper.tsx:116](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/DatatableWrapper.tsx#L116)
+[components/DatatableWrapper.tsx:131](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/DatatableWrapper.tsx#L131)
 
 ___
 
@@ -36,4 +36,4 @@ Change event for the checkboxes state.
 
 #### Defined in
 
-[components/DatatableWrapper.tsx:118](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/DatatableWrapper.tsx#L118)
+[components/DatatableWrapper.tsx:133](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/DatatableWrapper.tsx#L133)

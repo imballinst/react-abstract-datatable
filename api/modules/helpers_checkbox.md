@@ -1,3 +1,3 @@
-[react-bs-datatable](../README.md) / helpers/checkbox
+[react-abstract-datatable](../README.md) / helpers/checkbox
 
 # Module: helpers/checkbox

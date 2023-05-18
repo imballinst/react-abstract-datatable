@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/PaginationOptions](../modules/components_PaginationOptions.md) / PaginationOptionsLabels
+[react-abstract-datatable](../README.md) / [components/PaginationOptions](../modules/components_PaginationOptions.md) / PaginationOptionsLabels
 
 # Interface: PaginationOptionsLabels
 
@@ -25,7 +25,7 @@ is a horizontal form instead of vertical (e.g. using `flex-direction: row`).
 
 #### Defined in
 
-[components/PaginationOptions.tsx:21](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/PaginationOptions.tsx#L21)
+[components/PaginationOptions.tsx:20](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/PaginationOptions.tsx#L20)
 
 ___
 
@@ -38,4 +38,4 @@ Defaults to "Rows per page".
 
 #### Defined in
 
-[components/PaginationOptions.tsx:15](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/PaginationOptions.tsx#L15)
+[components/PaginationOptions.tsx:14](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/PaginationOptions.tsx#L14)

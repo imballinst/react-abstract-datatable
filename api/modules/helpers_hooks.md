@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / helpers/hooks
+[react-abstract-datatable](../README.md) / helpers/hooks
 
 # Module: helpers/hooks
 
@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[helpers/hooks.ts:6](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/hooks.ts#L6)
+[helpers/hooks.ts:6](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/hooks.ts#L6)
 
 ___
 
@@ -76,4 +76,4 @@ const onClick = createBulkCheckboxClickHandler('add', {
 
 #### Defined in
 
-[helpers/hooks.ts:44](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/hooks.ts#L44)
+[helpers/hooks.ts:44](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/hooks.ts#L44)

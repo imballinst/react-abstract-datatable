@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/BulkCheckboxControl](../modules/components_BulkCheckboxControl.md) / BulkCheckboxControlProps
+[react-abstract-datatable](../README.md) / [components/BulkCheckboxControl](../modules/components_BulkCheckboxControl.md) / BulkCheckboxControlProps
 
 # Interface: BulkCheckboxControlProps
 
@@ -22,4 +22,4 @@ Custom classes for the component.
 
 #### Defined in
 
-[components/BulkCheckboxControl.tsx:27](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/BulkCheckboxControl.tsx#L27)
+[components/BulkCheckboxControl.tsx:27](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/BulkCheckboxControl.tsx#L27)

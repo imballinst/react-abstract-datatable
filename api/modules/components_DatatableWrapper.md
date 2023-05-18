@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / components/DatatableWrapper
+[react-abstract-datatable](../README.md) / components/DatatableWrapper
 
 # Module: components/DatatableWrapper
 
@@ -42,4 +42,4 @@
 
 #### Defined in
 
-[components/DatatableWrapper.tsx:243](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/DatatableWrapper.tsx#L243)
+[components/DatatableWrapper.tsx:286](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/DatatableWrapper.tsx#L286)

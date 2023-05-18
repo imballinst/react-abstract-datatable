@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / EmptyTablePlaceholderProps
+[react-abstract-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / EmptyTablePlaceholderProps
 
 # Interface: EmptyTablePlaceholderProps
 
@@ -23,7 +23,7 @@ The className to pass to the component.
 
 #### Defined in
 
-[components/TableBody.tsx:331](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L331)
+[components/TableBody.tsx:333](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L333)
 
 ___
 
@@ -35,4 +35,4 @@ The label that will show up when the table is empty.
 
 #### Defined in
 
-[components/TableBody.tsx:333](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L333)
+[components/TableBody.tsx:335](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L335)

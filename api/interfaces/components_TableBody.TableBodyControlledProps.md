@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / TableBodyControlledProps
+[react-abstract-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / TableBodyControlledProps
 
 # Interface: TableBodyControlledProps
 
@@ -23,7 +23,7 @@ is of type `CheckboxState`.
 
 #### Defined in
 
-[components/TableBody.tsx:38](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L38)
+[components/TableBody.tsx:37](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L37)
 
 ___
 
@@ -36,7 +36,7 @@ then this should equal to the table body's length.
 
 #### Defined in
 
-[components/TableBody.tsx:45](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L45)
+[components/TableBody.tsx:44](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L44)
 
 ___
 
@@ -48,4 +48,4 @@ The function fired when any checkbox in the table changes.
 
 #### Defined in
 
-[components/TableBody.tsx:40](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L40)
+[components/TableBody.tsx:39](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L39)

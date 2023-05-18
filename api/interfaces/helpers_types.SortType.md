@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [helpers/types](../modules/helpers_types.md) / SortType
+[react-abstract-datatable](../README.md) / [helpers/types](../modules/helpers_types.md) / SortType
 
 # Interface: SortType
 
@@ -23,7 +23,7 @@ The sort order.
 
 #### Defined in
 
-[helpers/types.ts:18](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/types.ts#L18)
+[helpers/types.ts:13](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/types.ts#L13)
 
 ___
 
@@ -36,4 +36,4 @@ This is the same as `header.prop` from `TableColumnType` interface.
 
 #### Defined in
 
-[helpers/types.ts:16](https://github.com/imballinst/react-bs-datatable/blob/master/src/helpers/types.ts#L16)
+[helpers/types.ts:11](https://github.com/imballinst/react-abstract-datatable/blob/master/src/helpers/types.ts#L11)

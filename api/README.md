@@ -1,6 +1,6 @@
-react-bs-datatable
+react-abstract-datatable
 
-# react-bs-datatable
+# react-abstract-datatable
 
 ## Table of contents
 
@@ -9,11 +9,11 @@ react-bs-datatable
 - [components/BulkCheckboxControl](modules/components_BulkCheckboxControl.md)
 - [components/DatatableWrapper](modules/components_DatatableWrapper.md)
 - [components/Filter](modules/components_Filter.md)
-- [components/FontAwesome](modules/components_FontAwesome.md)
 - [components/Pagination](modules/components_Pagination.md)
 - [components/PaginationOptions](modules/components_PaginationOptions.md)
 - [components/TableBody](modules/components_TableBody.md)
 - [components/TableHeader](modules/components_TableHeader.md)
+- [components/\_base](modules/components__base.md)
 - [helpers/checkbox](modules/helpers_checkbox.md)
 - [helpers/data](modules/helpers_data.md)
 - [helpers/hooks](modules/helpers_hooks.md)

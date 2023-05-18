@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / components/Filter
+[react-abstract-datatable](../README.md) / components/Filter
 
 # Module: components/Filter
 
@@ -35,4 +35,4 @@ prop. Otherwise, this component will return `null`.
 
 #### Defined in
 
-[components/Filter.tsx:55](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/Filter.tsx#L55)
+[components/Filter.tsx:53](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/Filter.tsx#L53)

@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/Pagination](../modules/components_Pagination.md) / PaginationProps
+[react-abstract-datatable](../README.md) / [components/Pagination](../modules/components_Pagination.md) / PaginationProps
 
 # Interface: PaginationProps
 
@@ -29,7 +29,7 @@ To prevent layout shifts, `visibility: hidden` will be applied instead of
 
 #### Defined in
 
-[components/Pagination.tsx:49](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/Pagination.tsx#L49)
+[components/Pagination.tsx:48](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/Pagination.tsx#L48)
 
 ___
 
@@ -41,7 +41,7 @@ Customize the classes of the `Pagination` component.
 
 #### Defined in
 
-[components/Pagination.tsx:42](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/Pagination.tsx#L42)
+[components/Pagination.tsx:41](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/Pagination.tsx#L41)
 
 ___
 
@@ -61,7 +61,7 @@ Props to make the component controlled.
 
 #### Defined in
 
-[components/Pagination.tsx:57](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/Pagination.tsx#L57)
+[components/Pagination.tsx:56](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/Pagination.tsx#L56)
 
 ___
 
@@ -73,7 +73,7 @@ Customize the labels of the `Pagination` component.
 
 #### Defined in
 
-[components/Pagination.tsx:40](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/Pagination.tsx#L40)
+[components/Pagination.tsx:39](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/Pagination.tsx#L39)
 
 ___
 
@@ -87,4 +87,4 @@ When set to 5, for example: First, Prev, 1, 2, 3, 4, 5 Next, Last.
 
 #### Defined in
 
-[components/Pagination.tsx:55](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/Pagination.tsx#L55)
+[components/Pagination.tsx:54](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/Pagination.tsx#L54)

@@ -1,4 +1,4 @@
-[react-bs-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / TableBodyLabels
+[react-abstract-datatable](../README.md) / [components/TableBody](../modules/components_TableBody.md) / TableBodyLabels
 
 # Interface: TableBodyLabels
 
@@ -21,4 +21,4 @@ no data (empty array), or no matching found for the filtered text.
 
 #### Defined in
 
-[components/TableBody.tsx:21](https://github.com/imballinst/react-bs-datatable/blob/master/src/components/TableBody.tsx#L21)
+[components/TableBody.tsx:20](https://github.com/imballinst/react-abstract-datatable/blob/master/src/components/TableBody.tsx#L20)
