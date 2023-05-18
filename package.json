@@ -64,7 +64,9 @@
   "peerDependencies": {
     "react": ">=16.8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "nanoid": "4.0.2"
+  },
   "engines": {
     "node": ">=16"
   }

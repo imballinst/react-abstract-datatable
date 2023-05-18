@@ -1,7 +1,13 @@
 import React, { useEffect, useRef } from 'react';
+import { nanoid } from 'nanoid';
+
 import { useDatatableWrapper } from '../components/DatatableWrapper';
 import { getNextCheckboxState, GetNextCheckboxStateParams } from './checkbox';
 import { CheckboxOnChange, CheckboxState } from './types';
+
+export function useId(prefix = '') {
+  return useRef(`${prefix}${nanoid(4)}`).current;
+}
 
 export function useControlledStateSetter<ControlledPropsType extends object>(
   controlledProps: ControlledPropsType | undefined

@@ -9,7 +9,8 @@ import { makeClasses } from '../helpers/object';
 import { useDatatableWrapper } from './DatatableWrapper';
 import {
   useControlledStateSetter,
-  useCreateCheckboxHandlers
+  useCreateCheckboxHandlers,
+  useId
 } from '../helpers/hooks';
 
 export interface TableBodyLabels {
@@ -199,6 +200,8 @@ export function TableRow<TTableRowType extends TableRowType>({
   } = useDatatableWrapper();
   const headersLength = headers.length;
 
+  const rowId = useId(`row-${rowIdx}-`);
+
   function onRowClick(
     event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
   ) {
@@ -246,8 +249,8 @@ export function TableRow<TTableRowType extends TableRowType>({
 
       // Source for using visually hidden: https://www.w3.org/WAI/tutorials/forms/labels/#hiding-the-label-element.
       value = (
-        <FormGroup controlId={`table-selection-${rowData[checkbox.idProp]}`}>
-          <Label className="visually-hidden">
+        <FormGroup>
+          <Label className="visually-hidden" htmlFor={rowId}>
             {isSelected
               ? `Remove ${idValue} from selection`
               : `Add ${idValue} to selection`}
@@ -255,6 +258,7 @@ export function TableRow<TTableRowType extends TableRowType>({
           <Checkbox
             type="checkbox"
             name="table-selection"
+            id={rowId}
             value={rowData[checkbox.idProp]}
             className={checkbox.className}
             checked={checkboxState[prop].selected.has(idValue)}

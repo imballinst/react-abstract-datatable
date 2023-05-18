@@ -2,11 +2,11 @@ import React from 'react';
 
 // Tables.
 export const DefaultRow = (props: any): JSX.Element | null => {
-  return <tr {...props} />;
+  return <div {...props} />;
 };
 
 export const DefaultCol = (props: any): JSX.Element | null => {
-  return <td {...props} />;
+  return <div {...props} />;
 };
 
 export const DefaultTable = (props: any): JSX.Element | null => {

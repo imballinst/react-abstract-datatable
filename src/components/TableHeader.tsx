@@ -15,7 +15,8 @@ import {
 import { getNextSortState } from '../helpers/data';
 import {
   useControlledStateSetter,
-  useCreateCheckboxHandlers
+  useCreateCheckboxHandlers,
+  useId
 } from '../helpers/hooks';
 
 /**
@@ -74,6 +75,8 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
     tableComponents
   } = useDatatableWrapper();
   useControlledStateSetter(controlledProps);
+
+  const tableHeaderId = useId('table-header-');
 
   const onSortChange = controlledProps?.onSortChange || onSortChangeContext;
   const sortState = controlledProps?.sortState || sortStateContext;
@@ -168,8 +171,8 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
 
       // Source for using visually hidden: https://www.w3.org/WAI/tutorials/forms/labels/#hiding-the-label-element.
       rendered = (
-        <FormGroup controlId={`table-selection-all`}>
-          <Label className="visually-hidden">
+        <FormGroup>
+          <Label className="visually-hidden" htmlFor={tableHeaderId}>
             {nextCheckboxType === 'add'
               ? `Add ${
                   data.length - numberOfSelectedRowsInCurrentPage
@@ -178,6 +181,7 @@ export function TableHeader({ classes, controlledProps }: TableHeaderProps) {
           </Label>
           <Checkbox
             type="checkbox"
+            id={tableHeaderId}
             name="table-selection"
             value="all"
             className={checkbox.className}

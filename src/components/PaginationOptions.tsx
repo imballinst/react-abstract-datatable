@@ -1,5 +1,5 @@
 import React from 'react';
-import { useControlledStateSetter } from '../helpers/hooks';
+import { useControlledStateSetter, useId } from '../helpers/hooks';
 
 import { makeClasses } from '../helpers/object';
 import { RowsPerPageOnChange } from '../helpers/types';
@@ -103,6 +103,8 @@ export function PaginationOptions({
   const onRowsPerPageChange =
     controlledProps?.onRowsPerPageChange || onRowsPerPageChangeContext;
 
+  const paginationOptionsId = useId('pagination-options-');
+
   // Hide pagination if pagination is meant to not always be shown or
   // if the filtered data length is less than the minimum rows per page option.
   const hidePaginationOptions =
@@ -113,17 +115,17 @@ export function PaginationOptions({
 
   return (
     <FormGroup
-      controlId="formGroupPagination"
       className={makeClasses('paginationOpts__root', classes?.formGroup, {
         invisible: hidePaginationOptions
       })}
     >
-      <Label className={classes?.formText}>
+      <Label className={classes?.formText} htmlFor={paginationOptionsId}>
         {labels?.beforeSelect || 'Rows per page'}
       </Label>
       <Select
         name="table-pagination-options"
         value={rowsPerPageState}
+        id={paginationOptionsId}
         as="select"
         placeholder="select"
         onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
