@@ -1,66 +1,81 @@
-# React Bootstrap Datatable
+# React Abstract Datatable
 
-[![minzipped size](https://img.shields.io/bundlephobia/minzip/react-bs-datatable)](https://bundlephobia.com/package/react-bs-datatable) [![npm version](https://badge.fury.io/js/react-bs-datatable.svg)](https://badge.fury.io/js/react-bs-datatable) [![downloads per week](https://img.shields.io/npm/dw/react-bs-datatable)](https://www.npmjs.com/package/react-bs-datatable)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/react-abstract-datatable)](https://bundlephobia.com/package/react-abstract-datatable) [![npm version](https://badge.fury.io/js/react-abstract-datatable.svg)](https://badge.fury.io/js/react-abstract-datatable) [![downloads per week](https://img.shields.io/npm/dw/react-abstract-datatable)](https://www.npmjs.com/package/react-abstract-datatable)
 
-Inspired by [react-data-components](https://github.com/carlosrocha/react-data-components). This library uses [react-bootstrap](http://react-bootstrap.github.io/) stylesheets and javascripts. In addition, this library also uses [font-awesome](http://fontawesome.io/) for the table header, clear filter, and other stuffs.
+Initially, I created [react-bs-datatable](https://github.com/imballinst/react-bs-datatable) with support only for Bootstrap. Along the way, I made the Datatable to be extensible as well using other libraries, such as Material UI. However, I felt like it added unnecessary noise to the repository, so I removed it in version 3.
 
-This is the v3 version of the library. To see the v2 version of README, please visit the [v1 branch](https://github.com/imballinst/react-bs-datatable/tree/v1).
+This component-library-agnostic library will be used as the core of react-bs-datatable.
 
 ## Table of Contents
 
-- [What's new in v3?](#whats-new-in-v3)
-- [Migration guide](#migration-guide)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Storybook Demo](#storybook-demo)
 - [API reference](#api-reference)
 - [Contributing](#contributing)
 
-## What's new in v3?
-
-- New build and publish system. Previously, this library used Webpack for bundling etc.—now it only uses `tsc` to compile the TypeScript files to output all files to the `lib` folder.
-- ESM and CommonJS are now supported. There are 2 new TypeScript configurations in the project, one is used for building ESM and the other is for building CommonJS.
-- Updated Storybook. Previously, this library still used `storiesOf`, but now it is using Component Story Format (CSF), which was available starting from Storybook v5.
-- Lots of optimizations, bundle size in particular. As reported by [Bundlephobia](https://bundlephobia.com/package/react-bs-datatable@3.0.0-alpha.6) for the Alpha version, the minified size is down to just a quarter of what it was, whereas the minified + gzip is down to a third of what it was.
-- Replaced `font-awesome` CSS with the [React components of Font Awesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react). This allowed us to enable tree shaking, which resulted in the optimization point above.
-- Drop support for all other libraries. This library will now only support Bootstrap tables.
-- Auto generate component APIs.
-
-## Migration guide
-
-Please read [this guide](./MIGRATION_GUIDE.md) if you are migrating from v2.
-
 ## Installation
 
 With `npm`:
 
 ```bash
-npm install --save react-bs-datatable@3 bootstrap@5 react-bootstrap@2 @fortawesome/fontawesome-svg-core@6 @fortawesome/free-solid-svg-icons@6 @fortawesome/react-fontawesome@0
+npm install --save react-abstract-datatable
 ```
 
 With `yarn`:
 
 ```
-yarn add react-bs-datatable@3 bootstrap@5 react-bootstrap@2 @fortawesome/fontawesome-svg-core@6 @fortawesome/free-solid-svg-icons@6 @fortawesome/react-fontawesome@0
+yarn add react-abstract-datatable
 ```
 
 ## Usage
 
-For more complete examples, please visit this sandbox link (https://codesandbox.io/s/react-bs-datatable-3-typescript-bn234b) or the Storybook demo (https://imballinst.github.io/react-bs-datatable).
+For more complete examples, please visit this sandbox link (https://codesandbox.io/s/react-abstract-datatable-3-typescript-bn234b) or the Storybook demo (https://imballinst.github.io/react-abstract-datatable).
+
+For example, to use it with Bootstrap:
 
 ```jsx
 import React from 'react';
 import {
+  Button,
+  ButtonGroup,
+  Form,
+  Col,
+  FormGroup,
+  InputGroup,
+  Row,
+  Table
+} from 'react-bootstrap';
+import {
   DatatableWrapper,
   Filter,
   Pagination,
-  PaginationOpts,
+  PaginationOptions,
   TableBody,
+  TableColumnType,
   TableHeader
-} from 'react-bs-datatable';
-import { Col, Row, Table } from 'react-bootstrap';
+} from 'react-abstract-datatable';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import {
+  faSort,
+  faSortUp,
+  faSortDown,
+  faTimes
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const ICONS = {
+  sort: faSort,
+  'sort-up': faSortUp,
+  'sort-down': faSortDown,
+  times: faTimes
+};
+
+function Icon(props: { icon: 'times' | 'sort' | 'sort-up' | 'sort-down' }) {
+  return <FontAwesomeIcon icon={ICONS[props.icon]} className="fa-fw" />;
+}
 
 // Create table headers consisting of 4 columns.
 const header = [
@@ -92,7 +107,25 @@ const body = Array.from(new Array(57), () => {
 // Then, use it in a component.
 function TableComponent() {
   return (
-    <DatatableWrapper body={body} headers={headers}>
+    <DatatableWrapper
+      body={body}
+      headers={headers}
+      tableComponents={{
+        Button,
+        ButtonGroup,
+        Checkbox: Form.Check,
+        Col,
+        FormControl: Form.Control,
+        FormGroup,
+        HelperText: Form.Text,
+        Icon,
+        InputGroup,
+        Label: Form.Label,
+        Row,
+        Select: Form.Select,
+        Table
+      }}
+    >
       <Row className="mb-4">
         <Col
           xs={12}
@@ -129,7 +162,7 @@ function TableComponent() {
 
 ## Storybook Demo
 
-Head to https://imballinst.github.io/react-bs-datatable to see all of the features in action.
+Head to https://imballinst.github.io/react-abstract-datatable to see all of the features in action.
 
 ## API Reference
 
